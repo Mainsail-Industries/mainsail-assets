@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 72 72">
+  <!-- Generator: Adobe Illustrator 30.2.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
+  <circle cx="35.74" cy="36.83" r="16.32" fill="none" stroke="#101010" stroke-miterlimit="10" stroke-width="1.65"/>
+  <ellipse cx="35.74" cy="36.83" rx="16.32" ry="8.09" transform="translate(-15.57 36.06) rotate(-45)" fill="none" stroke="#101010" stroke-miterlimit="10" stroke-width="1.65"/>
+  <ellipse cx="35.74" cy="36.83" rx="8.09" ry="16.32" transform="translate(-15.57 36.06) rotate(-45)" fill="none" stroke="#101010" stroke-miterlimit="10" stroke-width="1.65"/>
+  <g>
+    <line x1="53.32" y1="18.96" x2="51.91" y2="20.38" fill="none" stroke="#101010" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="48.94" y1="23.34" x2="20.77" y2="51.52" fill="none" stroke="#101010" stroke-dasharray="4.19 4.19" stroke-miterlimit="10" stroke-width="2"/>
+    <line x1="19.29" y1="53" x2="17.87" y2="54.41" fill="none" stroke="#101010" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+  <line x1="24.34" y1="25.15" x2="47.42" y2="48.22" fill="none" stroke="#101010" stroke-miterlimit="10" stroke-width="1.65"/>
+  <circle cx="52.72" cy="19.85" r="3.61" fill="#101010"/>
+  <circle cx="19.14" cy="53.15" r="3.61" fill="#101010"/>
+</svg>

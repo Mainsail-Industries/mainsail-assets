@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 72 72">
+  <!-- Generator: Adobe Illustrator 30.2.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
+  <line x1="28.7" y1="19.89" x2="55.86" y2="19.89" fill="none" stroke="#101010" stroke-miterlimit="10" stroke-width="1.64"/>
+  <line x1="28.7" y1="27.95" x2="55.86" y2="27.95" fill="none" stroke="#101010" stroke-miterlimit="10" stroke-width="1.64"/>
+  <line x1="28.7" y1="36.01" x2="55.86" y2="36.01" fill="none" stroke="#101010" stroke-miterlimit="10" stroke-width="1.64"/>
+  <line x1="16" y1="54.39" x2="55.86" y2="54.39" fill="none" stroke="#101010" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1.64"/>
+  <path d="M29.34,47.31c2.65,0,2.65,2.88,5.3,2.88s2.65-2.88,5.3-2.88,2.65,2.88,5.3,2.88,2.65-2.88,5.31-2.88,2.65,2.88,5.31,2.88" fill="none" stroke="#101010" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1.64"/>
+  <line x1="17.24" y1="46.85" x2="21.04" y2="50.65" fill="none" stroke="#101010" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1.64"/>
+  <line x1="17.24" y1="50.65" x2="21.04" y2="46.85" fill="none" stroke="#101010" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1.64"/>
+  <circle cx="18.39" cy="19.89" r="2.11" fill="#101010"/>
+  <circle cx="18.39" cy="27.95" r="2.11" fill="#101010"/>
+  <circle cx="18.39" cy="36.01" r="2.11" fill="#101010"/>
+</svg>
