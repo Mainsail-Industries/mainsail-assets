@@ -1,0 +1,183 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "name": "Starlight Design System",
+  "version": "1.0.0",
+  "brand": {
+    "company": "Mainsail Industries",
+    "company_kind": "ISV. We produce software (Starlight). NOT a cloud, hosting provider, or managed service. Customers run Starlight on their own hardware — on-prem, edge, air-gapped, or in a cloud account they own.",
+    "product": "Starlight — software for running VMs, containers, and AI workloads on your own infrastructure",
+    "tagline": "Run VMs, containers, and AI on one platform.",
+    "voice": "Clear, experienced, and insider.",
+    "person": "Second person for product (\"Your cluster\"). First-person-plural for marketing (\"We run your workloads\"). Never \"I\".",
+    "casing": "Sentence case everywhere except proper product names (Starlight, Mainsail) and code/UPPERCASE_ENV_VARS.",
+    "banned_words": ["unlock", "empower", "supercharge", "revolutionize", "blazing fast", "next-gen", "journey"],
+    "preferred_verbs": ["ship", "run", "deploy", "scale", "boot", "route"],
+    "emoji": "Never in product UI or marketing. Acceptable in changelogs only, sparingly.",
+    "unicode": { "leads_to": "→", "separator": "·", "aside": "—" }
+  },
+  "color": {
+    "brand": {
+      "blue":  { "value": "#0047BB", "description": "Primary accent. CTAs, links, focus rings, active state." },
+      "black": { "value": "#212020", "description": "Product background base. Slightly warm; never pure #000." },
+      "grey":  { "value": "#BFBFBF", "description": "Silver from wordmark. Secondary text, dividers, disabled." },
+      "white": { "value": "#FFFFFF", "description": "Primary text on dark, primary background on light." }
+    },
+    "blue_scale": {
+      "50":  "#EAF0FC", "100": "#C7D6F5", "200": "#8FACEB", "300": "#5782E0", "400": "#2862D3",
+      "500": "#0047BB", "600": "#003A99", "700": "#002D77", "800": "#001F55", "900": "#00112E"
+    },
+    "neutral_scale": {
+      "0":   "#FFFFFF", "50":  "#F5F6F8", "100": "#E7E9ED", "200": "#C9CCD3", "300": "#9DA1AB",
+      "400": "#6B6F79", "500": "#4A4D55", "600": "#2F3238", "700": "#1E2025", "800": "#15171B",
+      "900": "#0B0D12", "950": "#06080B"
+    },
+    "semantic_dark": {
+      "bg-0": { "value": "#0B0D12", "role": "page / deepest" },
+      "bg-1": { "value": "#15171B", "role": "product surface" },
+      "bg-2": { "value": "#1E2025", "role": "raised cards" },
+      "bg-3": { "value": "#2F3238", "role": "popover, hovered row" },
+      "fg-1": { "value": "#FFFFFF",                       "role": "primary text" },
+      "fg-2": { "value": "hsla(220 10% 98% / 0.78)",      "role": "secondary text" },
+      "fg-3": { "value": "#BFBFBF",                       "role": "tertiary, meta, labels" },
+      "fg-4": { "value": "hsla(220 10% 80% / 0.42)",      "role": "muted, disabled, placeholder" },
+      "border-1":      { "value": "hsla(0 0% 100% / 0.08)", "role": "hairline" },
+      "border-2":      { "value": "hsla(0 0% 100% / 0.14)", "role": "hover border" },
+      "border-accent": { "value": "hsla(218 100% 37% / 0.60)", "role": "focus / active border" },
+      "accent":        { "value": "#0047BB" },
+      "accent-hover":  { "value": "#1459D2" },
+      "accent-press":  { "value": "#002D77" },
+      "accent-fg":     { "value": "#FFFFFF" }
+    },
+    "status": {
+      "success": { "value": "#2BD4A1", "description": "Cool cyan-green. Tuned for dark." },
+      "warning": { "value": "#F5B544", "description": "Amber." },
+      "danger":  { "value": "#FF5A5F", "description": "Red." },
+      "info":    { "value": "#2862D3" }
+    }
+  },
+  "typography": {
+    "families": {
+      "display": { "stack": "Manrope, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif", "weights": [200, 300, 400, 500, 600, 700, 800], "use": "H1–H3, eyebrows, logo lockups, stat numbers" },
+      "body":    { "stack": "Poppins, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif", "weights": [300, 400, 500, 600, 700], "use": "paragraphs, UI text, labels" },
+      "mono":    { "stack": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace", "weights": [400, 500, 600], "use": "code, numeric tabular data", "note": "JetBrains Mono is a substitution; brand spec did not name a mono. Confirm or swap." }
+    },
+    "scale_px": [12, 13, 14, 16, 18, 20, 24, 32, 40, 56, 72, 88],
+    "headings": {
+      "h1": { "size": 72, "tracking": "-0.035em", "line_height": 1.1, "weight": 700 },
+      "h2": { "size": 56, "tracking": "-0.030em", "line_height": 1.1, "weight": 700 },
+      "h3": { "size": 40, "tracking": "-0.025em", "line_height": 1.1, "weight": 700 },
+      "h4": { "size": 32, "tracking": "-0.020em", "line_height": 1.1, "weight": 700 },
+      "h5": { "size": 24, "tracking": "-0.015em", "line_height": 1.1, "weight": 700 },
+      "h6": { "size": 20, "tracking": "-0.010em", "line_height": 1.1, "weight": 700 }
+    },
+    "body": { "size": 16, "weight": 400, "line_height": 1.5 },
+    "eyebrow": { "family": "Manrope", "weight": 600, "size": 12, "tracking": "0.14em", "case": "uppercase" },
+    "line_heights": { "tight": 1.1, "snug": 1.25, "normal": 1.5, "relaxed": 1.65 }
+  },
+  "spacing": { "scale_px": [4, 8, 12, 16, 24, 32, 48, 64, 96, 128], "section_desktop": 96, "section_tablet": 64, "section_mobile": 48, "card_padding": 24 },
+  "radius_px": { "sm": 6, "md": 10, "lg": 16, "xl": 24, "full": 999 },
+  "radius_usage": { "sm": "small chips", "md": "buttons, inputs", "lg": "cards", "xl": "hero panels", "full": "pills, avatars" },
+  "shadow": {
+    "raised": "0 1px 0 hsla(0 0% 100% / 0.06) inset, 0 1px 2px hsla(0 0% 0% / 0.4)",
+    "pop":    "0 20px 60px -20px hsla(220 50% 4% / 0.9), 0 1px 0 hsla(0 0% 100% / 0.06) inset",
+    "glow":   "0 0 0 1px hsla(218 100% 37% / 0.6), 0 0 40px -4px hsla(218 100% 37% / 0.4)"
+  },
+  "motion": {
+    "easing": {
+      "out":   "cubic-bezier(0.22, 1, 0.36, 1)",
+      "inout": "cubic-bezier(0.65, 0, 0.35, 1)"
+    },
+    "duration_ms": { "micro": 120, "sm": 220, "md": 420, "lg": 700 },
+    "rules": [
+      "Cursor parallax on hero: star drifts 1x, aurora 0.4x, secondary type 0.15x. Damped spring, not 1:1.",
+      "Buttons hover: translateY(-1px) + brightness +6%.",
+      "Buttons press: translateY(0) scale(0.99) for 80ms.",
+      "Cards hover: border white/6% → white/14%, no scale.",
+      "Loading: lens-flare with bokeh ghost stars + anamorphic streak.",
+      "Skeleton: 1px shimmer sweep, 1.6s ease-in-out."
+    ]
+  },
+  "background_system": {
+    "base": "Solid bg-0 (#06080B–#0B0D12).",
+    "aurora": "Soft radial blue gradient at ~55% opacity, blurred 40–120px, off-center. Cursor-reactive on marketing hero.",
+    "dot_grid": "radial-gradient dots, 24–28px, 5% white opacity. Product surfaces only.",
+    "ghost_star": "Full-bleed star glyph at 4–8% opacity as texture.",
+    "rules": ["No 5-color gradient meshes.", "No diagonal stripes.", "No noise/grain overlays.", "One base + one accent glow + one texture, max."]
+  },
+  "assets": {
+    "repo": "https://github.com/Mainsail-Industries/mainsail-assets",
+    "raw_base": "https://raw.githubusercontent.com/Mainsail-Industries/mainsail-assets/main/",
+    "note": "All binary assets (logos, star glyph, boot splash, 57 icon SVGs) live in the GitHub repo above. Filenames below are relative to the repo root."
+  },
+  "logos": {
+    "mainsail_parent": {
+      "blue": "mainsail-logo-blue.png",
+      "black": "mainsail-black-sm.png",
+      "white": "mainsail-white.png",
+      "use": "Parent-company endorsement only — corporate footer, legal, About page. Never co-locked with the Starlight wordmark on product surfaces."
+    },
+    "wordmark": {
+      "white": "starlight-logo-white.png",
+      "black": "starlight-logo-black.png",
+      "silver": "starlight-logo-silver.png"
+    },
+    "star_glyph": {
+      "white": "starlight-star-b-white.png",
+      "black": "starlight-star-b.png",
+      "silver": "starlight-symbol-silver.png",
+      "shape": "Eight-pointed M-star",
+      "use": ["app icon", "loading state", "auth screens", "404", "empty global state"],
+      "never": "Never inline with body copy."
+    },
+    "boot_splash": {
+      "1080p": "starlight-grub-1920x1080.png",
+      "1440p": "starlight-grub-2560x1440.png",
+      "use": "GRUB / OS boot splash. Reuse for full-bleed marketing hero, loading screens, auth backgrounds."
+    }
+  },
+  "iconography": {
+    "system": "Official Starlight icons",
+    "count": 57,
+    "viewbox": "0 0 72 72",
+    "stroke_width": 1.65,
+    "stroke_miterlimit": 10,
+    "color_strategy": "All strokes/fills rewritten to currentColor — set `color` on parent, icon inherits.",
+    "size_recommendations_px": [20, 24, 32, 48, 64],
+    "categories": {
+      "compute": ["icon-virtual-machine", "icon-container-pod", "icon-cpu-vcpu", "icon-inference-engine", "icon-live-migration", "icon-confidential-compute-enclave", "icon-workload-process"],
+      "networking": ["icon-network-tunnel", "icon-overlay-network", "icon-p2p-mesh", "icon-dns-discovery", "icon-firewall-access-policy", "icon-gatway-ingress", "icon-node-peer"],
+      "storage": ["icon-block-storage-volume", "icon-distributed-ojectstore", "icon-immutable-backup", "icon-replicated-data", "icon-s3-compatible-bucket"],
+      "security": ["icon-attestation-verified-boot", "icon-certificate-identity", "icon-hardware-entropy-source", "icon-post-quantum-key", "icon-quantum-safe-tunnel", "icon-signing-sbom", "icon-zero-trust-policy"],
+      "orchestration-state": ["icon-cluster", "icon-scheduler", "icon-health-check", "icon-event-log-stream", "icon-gossip-state-propagation", "icon-node-authoritative"],
+      "edge-connectivity": ["icon-edge-node", "icon-air-gapped-node", "icon-ddil-environment", "icon-satellite-link", "icon-reconnect-sync-recovery", "icon-disconnected-operation-mode"],
+      "infrastructure-topology": ["icon-cloud-anchor", "icon-hub-and-spoke", "icon-full-mesh", "icon-multi-node-cluster", "icon-on-premise-rack", "icon-single-node", "icon-wan-link"],
+      "management-interfaces": ["icon-cli-terminal", "icon-api-endpoint", "icon-dashboard-desktop", "icon-ansible-playbook", "icon-terraform-block", "icon-operator-role"],
+      "platform-os": ["icon-ami-disk-image", "icon-container-image-registry", "icon-immutable-os-bootc", "icon-sbom", "icon-signed-artifact", "icon-software-update-ota"]
+    },
+    "path_template": "starlight-icons-black-svg/{category_folder}/{slug}.svg",
+    "category_folders": {
+      "compute": "compute",
+      "networking": "networking",
+      "storage": "storage",
+      "security": "security",
+      "orchestration-state": "orchestration & state",
+      "edge-connectivity": "edge & connectivity",
+      "infrastructure-topology": "infrastructure topology",
+      "management-interfaces": "management & interfaces",
+      "platform-os": "platform:OS"
+    },
+    "path_note": "Folder names in the repo contain spaces, ampersands, and one colon (platform:OS). URL-encode when constructing raw URLs.",
+    "rules": ["Never restroke — 1.65 weight is identity.", "Never combine with another icon library on the same surface.", "Default color = #fff on dark, #212020 on light.", "Hover #5782E0; active #0047BB."]
+  },
+  "copy_examples": {
+    "off_brand": [
+      "🚀 Unlock next-gen compute with Starlight!",
+      "Your AI journey starts here.",
+      "Empowering developers to build the future.",
+      "One bill for all your compute.",
+      "Sign up and boot a GPU in 40 seconds.",
+      "The cloud, reimagined."
+    ],
+    "positioning_guardrails": "Starlight is software the customer installs and runs, not a hosted service. Never imply Mainsail provides infrastructure, billing, capacity, or uptime. Avoid: 'sign up', 'on demand', per-second pricing, 'one bill', SLA language, 'the cloud', 'hosted'."
+  }
+}
