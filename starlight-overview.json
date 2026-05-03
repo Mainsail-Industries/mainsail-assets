@@ -1,0 +1,136 @@
+{
+  "doc_type": "product-overview",
+  "version": "1.0.0",
+  "as_of": "2026-04",
+  "source": "Starlight — Edge-Native Infrastructure deck",
+  "company": {
+    "name": "Mainsail Industries",
+    "kind": "Independent Software Vendor (ISV)",
+    "website": "https://mainsailindustries.com"
+  },
+  "product": {
+    "name": "Starlight",
+    "category": "Edge-Native Infrastructure",
+    "tagline": "One platform. Every workload.",
+    "definition": "A unified platform to run virtual machines, containers, and AI workloads directly at the edge — with security and autonomy embedded into the system itself.",
+    "pillars": [
+      { "n": "01", "name": "Unified",    "claim": "VMs, containers, AI — one control plane." },
+      { "n": "02", "name": "Edge-first", "claim": "Operates without central coordination." },
+      { "n": "03", "name": "Autonomous", "claim": "Security & resilience built-in." }
+    ]
+  },
+  "why": {
+    "headline": "Built for scale. Not for constraint.",
+    "thesis": "Two decades of datacenter infrastructure assumed reliable networks, abundant compute, and dedicated teams to operate complexity at scale. The world has moved to the edge, where those assumptions break down.",
+    "waves": [
+      { "era": "2000s", "tag": "Virtualization",  "title": "Consolidation",  "detail": "Workloads consolidated in centralized environments. Assumed reliable networks and abundant compute.", "axis": "Datacenter" },
+      { "era": "2010s", "tag": "Cloud-native",    "title": "Orchestration",  "detail": "Containers & Kubernetes scaled fleets to thousands of machines — built for constant coordination, not constraint.", "axis": "Datacenter" },
+      { "era": "2020s", "tag": "Intelligence",    "title": "Modern AI",      "detail": "Inference moves close to users and data — where centralized assumptions about network, scale, and trust break down.", "axis": "Edge" }
+    ],
+    "edge_reality": ["one or two nodes", "intermittent networks", "constrained compute"]
+  },
+  "unified_by_design": {
+    "headline": "One API. Every workload.",
+    "summary": "VMs, containers, and AI managed through one operational model. Desktop, CLI, or automation — all pointing at the same control plane.",
+    "workloads":  ["Virtual machines", "Containers", "AI workloads"],
+    "interfaces": ["Desktop app", "CLI", "Automation / API"],
+    "shared": [
+      { "name": "Shared identity",  "detail": "Same auth, same roles, across every workload type." },
+      { "name": "Shared policy",    "detail": "One enforcement model — VMs, containers, and AI alike." },
+      { "name": "Shared lifecycle", "detail": "Deploy, observe, and retire with one set of primitives." }
+    ]
+  },
+  "vmware_takeout": {
+    "headline": "Off VMware. On a modern platform.",
+    "summary": "Replace the VMware stack with a platform that runs the same VMs — plus containers and AI — under pricing you can predict and a license you can understand.",
+    "compare": [
+      { "axis": "Pricing",   "vmware": "Repriced; double-digit increases common",       "starlight": "Predictable, per-node — no surprise uplifts" },
+      { "axis": "Licensing", "vmware": "Core / socket-pair counting, SKU sprawl",       "starlight": "No core or socket-pair counting" },
+      { "axis": "Renewal",   "vmware": "Forced bundles; features you don't use",        "starlight": "One SKU. What you run is what you pay for" },
+      { "axis": "Scope",     "vmware": "VMs only — containers & AI elsewhere",          "starlight": "VMs, containers, and AI on one platform" }
+    ],
+    "compatibility": [
+      { "name": "Workload compatible", "detail": "Existing VMs — Windows and Linux — run on Starlight. Bring images as-is." },
+      { "name": "Feature compatible",  "detail": "Live migration, HA, snapshots, networking — the feature set teams rely on, natively." },
+      { "name": "Move at your pace",   "detail": "Run both during transition. Consolidate when you're ready — no forklift required." }
+    ]
+  },
+  "containers": {
+    "headline": "Containers. Without Kubernetes complexity.",
+    "model": "An entirely new orchestration model. Every node is autonomous — it tracks its own resources and shares state peer-to-peer with the cluster. No brittle central control plane.",
+    "topologies": {
+      "kubernetes": { "shape": "Star topology",  "detail": "Every node depends on the control plane.", "failure": "If the control plane is unreachable, the cluster drifts." },
+      "starlight":  { "shape": "Peer mesh",      "detail": "Every node is autonomous; state shared by protocol.", "behavior": "Each node runs on its own. The cluster stays consistent." }
+    },
+    "benefits": [
+      { "name": "No control plane to maintain", "detail": "No etcd, no scheduler, no operator sprawl. Less to run, less to break." },
+      { "name": "Runs disconnected",            "detail": "Nodes operate independently when the network drops. State reconverges on its own." },
+      { "name": "Same artifacts",               "detail": "Existing OCI images run as-is. Helm charts and K8s workloads replatform incrementally." }
+    ]
+  },
+  "ai": {
+    "headline": "Everything you need to run AI.",
+    "summary": "Models, drivers, protocols, and agent control — shipped as part of the platform. No separate AI stack. No glue work. Deploy inference the same way you deploy any workload.",
+    "capabilities": [
+      { "tag": "Models as containers", "title": "Ship AI like you ship apps.",  "detail": "Models are delivered as OCI container images. Same packaging, same lifecycle, same primitives as every other workload — from dev to edge." },
+      { "tag": "Drivers included",     "title": "Ready on first boot.",         "detail": "GPU drivers, accelerator runtimes, and inference toolchains preconfigured and version-matched. No driver hell, no kernel-module roulette." },
+      { "tag": "MCP server",           "title": "Agents speak natively.",       "detail": "A built-in Model Context Protocol server exposes Starlight to AI agents, so tools and models can interact with the platform over a standard interface." },
+      { "tag": "Agents control infra", "title": "AI operates Starlight.",       "detail": "Use agents to deploy, observe, and manage infrastructure — not just workloads. Control plane is programmable end-to-end." }
+    ],
+    "ai_security": {
+      "principle": "Models are untrusted code. Starlight enforces that.",
+      "controls": [
+        "Sandboxed execution with resource limits",
+        "Data paths & egress controlled by policy",
+        "Full observability on every run"
+      ]
+    }
+  },
+  "edge": {
+    "headline": "Autonomy, not central control.",
+    "summary": "Each location operates on its own. Workloads keep running during disconnection. Systems synchronize state when connectivity returns.",
+    "stats": [
+      { "metric": "2-node",  "name": "High availability",       "detail": "First-class HA without a three-node cluster. Matches edge reality — not datacenter baseline." },
+      { "metric": "0-ops",   "name": "Disconnected operation",  "detail": "Nodes function independently when the network drops. No dependency on a central system to keep workloads alive." },
+      { "metric": "1×",      "name": "Platform, every scale",   "detail": "Single node to distributed fleet — same operating model. Start small and expand without rework." }
+    ]
+  },
+  "security": {
+    "headline": "Security is part of the architecture.",
+    "summary": "Integrated identity, policy enforcement, a hardened OS foundation, and runtime protection for every workload — including AI.",
+    "layers": [
+      {
+        "tag": "Foundation", "title": "Verified & immutable.",
+        "items": ["Image-based OS, read-only root", "Signed builds with full attestation", "No runtime drift from deployment", "DISA STIG & FIPS 140-3 alignment"]
+      },
+      {
+        "tag": "Runtime", "title": "Enforced, not observed.",
+        "items": ["Process-level visibility & control", "Filesystem & network policy", "Capability & syscall controls", "Identity-driven, real-time"]
+      },
+      {
+        "tag": "Advanced", "title": "Ready for what's next.",
+        "items": ["Confidential computing support", "Quantum-resilient cryptography", "AI workloads sandboxed by default", "Data & egress path controls"]
+      }
+    ]
+  },
+  "adoption": {
+    "headline": "Bring your workloads with you.",
+    "summary": "Most teams aren't starting from scratch. Starlight is a new operating model — not a rewrite of the one you already run.",
+    "path": [
+      "Existing container images run as-is",
+      "Kubernetes workloads replatform incrementally",
+      "Helm charts adapt without rewriting apps",
+      "CI/CD keeps delivering the same artifacts",
+      "Run both models during transition",
+      "Standardize when you're ready"
+    ],
+    "positioning": "Starlight is built by Mainsail Industries for organizations operating where infrastructure must function with limited resources, unreliable networks, and no room for failure."
+  },
+  "glossary": {
+    "MCP": "Model Context Protocol — interface that lets AI agents drive Starlight directly",
+    "OCI": "Open Container Initiative — container image standard",
+    "STIG": "Security Technical Implementation Guide — DoD security configuration standard",
+    "FIPS 140-3": "U.S. federal cryptographic module standard",
+    "Two-node HA": "High availability with only two nodes — first-class target for edge sites"
+  }
+}
