@@ -96,6 +96,32 @@ Body 16/1.5 weight 400. Eyebrow: Manrope 600 / 12px / 0.14em / UPPERCASE.
   - `pop`: `0 20px 60px -20px hsla(220 50% 4% / .9), 0 1px 0 hsla(0 0% 100% / .06) inset`
   - `glow`: `0 0 0 1px hsla(218 100% 37% / .6), 0 0 40px -4px hsla(218 100% 37% / .4)`
 
+### Product workspace density
+
+Starlight Desktop uses the dark palette as its default product mode. Marketing
+type and spacing do not carry into dense operator surfaces unchanged.
+
+| Token | Value |
+|---|---:|
+| base UI type | 13px |
+| metadata type | 11px |
+| table header type | 10px |
+| dense row height | 36px |
+| primary workspace header | 44px |
+| contextual header | 40px |
+| complete workspace header | 84px |
+| separator | 1px hairline |
+
+- Workload families are first-class workspace tabs, not branches in a global
+  sidebar tree.
+- Server selection is scope rather than navigation and belongs in the header.
+- Use one blue accent for active, focus, link, and primary-action states.
+- Prefer hairline separators and tonal surfaces to shadows or nested cards.
+- Detail concerns use tabs instead of one long stack of collapsible panels.
+- Creation starts from one global **New** entry point and confirms
+  workload-specific settings before mutation.
+- The shell is a toggleable bottom drawer and must not cover primary content.
+
 ## 5. Motion ("Miro-inspired")
 
 - **Easing.** out `cubic-bezier(0.22, 1, 0.36, 1)` · inout `cubic-bezier(0.65, 0, 0.35, 1)`. No default linear.
