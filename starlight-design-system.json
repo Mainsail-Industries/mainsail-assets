@@ -1,7 +1,7 @@
 {
   "$schema": "https://design-tokens.github.io/community-group/format/",
   "name": "Starlight Design System",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "brand": {
     "company": "Mainsail Industries",
     "company_kind": "ISV. We produce software (Starlight). NOT a cloud, hosting provider, or managed service. Customers run Starlight on their own hardware — on-prem, edge, air-gapped, or in a cloud account they own.",
@@ -75,6 +75,29 @@
     "line_heights": { "tight": 1.1, "snug": 1.25, "normal": 1.5, "relaxed": 1.65 }
   },
   "spacing": { "scale_px": [4, 8, 12, 16, 24, 32, 48, 64, 96, 128], "section_desktop": 96, "section_tablet": 64, "section_mobile": 48, "card_padding": 24 },
+  "product_ui": {
+    "default_mode": "dark",
+    "navigation": "workspace tabs with contextual section tabs",
+    "scope_control": "header switcher",
+    "shell_surface": "toggleable bottom drawer",
+    "base_font_px": 13,
+    "meta_font_px": 11,
+    "table_header_font_px": 10,
+    "row_height_px": 36,
+    "primary_header_height_px": 44,
+    "context_header_height_px": 40,
+    "workspace_header_height_px": 84,
+    "hairline_width_px": 1,
+    "rules": [
+      "Workload families are first-class destinations, never branches in a global sidebar tree.",
+      "Server selection is scope, not navigation, and belongs in the global header.",
+      "Use one blue accent for active, focus, link, and primary-action states.",
+      "Prefer hairline separators and tonal surfaces to shadows or nested cards.",
+      "Keep global product UI at 13px and metadata at 10–11px; reserve the marketing type scale for editorial surfaces.",
+      "Detail concerns use tabs. Do not stack every concern into one scrolling page.",
+      "Creation starts from one global New entry point and confirms workload-specific settings before mutation."
+    ]
+  },
   "radius_px": { "sm": 6, "md": 10, "lg": 16, "xl": 24, "full": 999 },
   "radius_usage": { "sm": "small chips", "md": "buttons, inputs", "lg": "cards", "xl": "hero panels", "full": "pills, avatars" },
   "shadow": {
