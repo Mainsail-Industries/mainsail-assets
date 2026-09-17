@@ -1,7 +1,7 @@
 {
   "$schema": "https://design-tokens.github.io/community-group/format/",
   "name": "Starlight Design System",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "brand": {
     "company": "Mainsail Industries",
     "company_kind": "ISV. We produce software (Starlight). NOT a cloud, hosting provider, or managed service. Customers run Starlight on their own hardware — on-prem, edge, air-gapped, or in a cloud account they own.",
@@ -97,6 +97,36 @@
       "Detail concerns use tabs. Do not stack every concern into one scrolling page.",
       "Creation starts from one global New entry point and confirms workload-specific settings before mutation."
     ]
+  },
+  "boardui": {
+    "role": "Component framework for Starlight application interfaces. Vite + React 19 + Tailwind CSS v4 + React Aria. Components are copied into the app as source.",
+    "site": "https://www.boardui.com",
+    "repo": "https://github.com/BoardUI/boardui",
+    "licensing": {
+      "free": "MIT. Safe in public repos.",
+      "pro": "BoardUI License (paid). Pro source lives only in the private starlight-ui repo. Never commit Pro files or the license key to a public repo."
+    },
+    "theme_override": "tokens/starlight-boardui.css",
+    "theme_override_raw_url": "https://raw.githubusercontent.com/Mainsail-Industries/mainsail-assets/main/tokens/starlight-boardui.css",
+    "import_order": ["tailwindcss", "./theme.css", "./typography.css", "./starlight-boardui.css"],
+    "default_mode_class": "<html class=\"dark\">",
+    "token_mapping": {
+      "--color-accent-50..950": "color.blue_scale (500 = #0047BB); 950 extended to #000A1C",
+      "--color-neutral-50..950": "Tailwind neutral lightness steps with Starlight cool tint (oklch hue 260). Marketing neutral_scale is too dark for BoardUI surfaces.",
+      "--font-sans": "typography.families.body (Poppins, @fontsource/poppins)",
+      "--font-display": "typography.families.display (Manrope, @fontsource-variable/manrope)",
+      "--font-mono": "typography.families.mono (JetBrains Mono, @fontsource-variable/jetbrains-mono)",
+      "--color-starlight-*": "color.brand and color.status",
+      "--color-lime-50..950": "status.success ramp (400 = #2BD4A1); BoardUI uses lime for success",
+      "--color-chart-1..9": "blue_scale, status and neutral colors",
+      "text-title-*, text-display-*, text-large-title-*, h1-h3": "display font (Manrope)"
+    },
+    "dark_surface_mapping": {
+      "background-full (neutral-925)": "bg-0",
+      "background-primary (neutral-800)": "bg-1",
+      "background-tertiary-hover (neutral-700)": "bg-2",
+      "text-primary (neutral-50)": "fg-1"
+    }
   },
   "radius_px": { "sm": 6, "md": 10, "lg": 16, "xl": 24, "full": 999 },
   "radius_usage": { "sm": "small chips", "md": "buttons, inputs", "lg": "cards", "xl": "hero panels", "full": "pills, avatars" },

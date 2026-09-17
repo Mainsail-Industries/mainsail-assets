@@ -1,0 +1,140 @@
+/* ---------------------------------------------------------------------------
+ * Starlight → BoardUI theme override
+ *
+ * Source of truth: starlight-design-system.json (color, typography).
+ * Import AFTER BoardUI's theme.css in styles/globals.css:
+ *
+ *   @import "tailwindcss";
+ *   @import "./theme.css";
+ *   @import "./typography.css";
+ *   @import "./starlight-boardui.css";
+ *
+ * BoardUI's semantic tokens reference the accent-* and neutral-* ramps, so
+ * overriding those ramps re-skins every component (free and Pro) without
+ * editing component source. Product UI defaults to dark: <html class="dark">.
+ * --------------------------------------------------------------------------- */
+
+@theme {
+  /* ----- Accent ramp: Starlight blue (brand #0047BB = 500) ------------------ */
+  --color-accent-50:  #EAF0FC;
+  --color-accent-100: #C7D6F5;
+  --color-accent-200: #8FACEB;
+  --color-accent-300: #5782E0;
+  --color-accent-400: #2862D3;
+  --color-accent-500: #0047BB;
+  --color-accent-600: #003A99;
+  --color-accent-700: #002D77;
+  --color-accent-800: #001F55;
+  --color-accent-900: #00112E;
+  --color-accent-950: #000A1C;
+
+  /* ----- Neutral ramp: Starlight cool neutrals ------------------------------
+   * Same lightness steps as Tailwind's neutral ramp (what BoardUI is tuned
+   * for), with Starlight's cool blue-grey tint. Starlight's marketing
+   * neutral_scale is darker per step and made BoardUI surfaces too dark.
+   * Dark mode: page = 925, cards = 800, hover = 700.
+   * ------------------------------------------------------------------------*/
+  --color-neutral-50: oklch(0.985 0.004 260);
+  --color-neutral-100: oklch(0.97 0.004 260);
+  --color-neutral-200: oklch(0.922 0.004 260);
+  --color-neutral-300: oklch(0.87 0.009 260);
+  --color-neutral-400: oklch(0.708 0.009 260);
+  --color-neutral-500: oklch(0.556 0.009 260);
+  --color-neutral-600: oklch(0.439 0.009 260);
+  --color-neutral-700: oklch(0.371 0.009 260);
+  --color-neutral-800: oklch(0.285 0.009 260);
+  --color-neutral-900: oklch(0.215 0.009 260);
+  --color-neutral-925: oklch(0.19 0.009 260);
+  --color-neutral-950: oklch(0.155 0.009 260);
+
+  /* ----- Brand primitives (for direct use: bg-starlight-blue, etc.) -------- */
+  --color-starlight-blue:  #0047BB;
+  --color-starlight-black: #212020;
+  --color-starlight-grey:  #BFBFBF;
+  --color-starlight-white: #FFFFFF;
+
+  /* ----- Status ------------------------------------------------------------ */
+  --color-starlight-success: #2BD4A1;
+  --color-starlight-warning: #F5B544;
+  --color-starlight-danger:  #FF5A5F;
+  --color-starlight-info:    #2862D3;
+
+  /* ----- Success ramp ------------------------------------------------------
+   * BoardUI uses lime-* for success states (delta chips, success
+   * notifications). Re-tint it to Starlight success #2BD4A1 (= 400).
+   * ------------------------------------------------------------------------*/
+  --color-lime-50:  #EAFBF6;
+  --color-lime-100: #C9F5E8;
+  --color-lime-200: #96EBD2;
+  --color-lime-300: #5FDFBA;
+  --color-lime-400: #2BD4A1;
+  --color-lime-500: #1FB889;
+  --color-lime-600: #17936E;
+  --color-lime-700: #137457;
+  --color-lime-800: #105A45;
+  --color-lime-900: #0C4636;
+  --color-lime-950: #062A20;
+
+  /* ----- Typography ----------------------------------------------------------
+   * Vite: install the faces with Fontsource and import them in main.tsx:
+   *   @fontsource-variable/manrope, @fontsource/poppins,
+   *   @fontsource-variable/jetbrains-mono
+   * ------------------------------------------------------------------------*/
+  --font-sans: Poppins, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+               Helvetica, Arial, sans-serif;
+  --font-display: "Manrope Variable", Manrope, ui-sans-serif, system-ui,
+                  -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono: "JetBrains Mono Variable", "JetBrains Mono", ui-monospace,
+               SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* ----- Starlight motion -------------------------------------------------- */
+  --ease-starlight-out:   cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-starlight-inout: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Starlight product UI is dense: 13px base text. Set on body, not html,
+ * so rem-based spacing and component sizes stay intact. */
+body {
+  font-size: 13px;
+}
+
+/* ----- Charts ----------------------------------------------------------------
+ * Starlight palette: blues first, status hues for meaning, neutrals last.
+ * -------------------------------------------------------------------------- */
+:root,
+.dark {
+  --color-chart-1:        #5782E0;
+  --color-chart-1-active: #2862D3;
+  --color-chart-2:        #2BD4A1;
+  --color-chart-2-active: #1FB889;
+  --color-chart-3:        #8FACEB;
+  --color-chart-3-active: #5782E0;
+  --color-chart-4:        #F5B544;
+  --color-chart-4-active: #E09A1F;
+  --color-chart-5:        #9DA1AB;
+  --color-chart-5-active: #6B6F79;
+  --color-chart-6:        #0047BB;
+  --color-chart-6-active: #003A99;
+  --color-chart-7:        #C7D6F5;
+  --color-chart-7-active: #8FACEB;
+  --color-chart-8:        #FF5A5F;
+  --color-chart-8-active: #E6454A;
+  --color-chart-9:        #BFBFBF;
+  --color-chart-9-active: #9DA1AB;
+  --color-chart-agents-bar:        #2862D3;
+  --color-chart-agents-bar-active: #5782E0;
+}
+
+/* ----- Display type ----------------------------------------------------------
+ * Starlight sets titles, display text and stat numbers in Manrope. BoardUI's
+ * text-* styles set size and weight only, so apply the family here. In the
+ * base layer, so an explicit font-* utility still wins.
+ * -------------------------------------------------------------------------- */
+@layer base {
+  [class*="text-large-title-"],
+  [class*="text-display-"],
+  [class*="text-title-"],
+  h1, h2, h3 {
+    font-family: var(--font-display);
+  }
+}
